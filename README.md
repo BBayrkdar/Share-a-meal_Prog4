@@ -1,4 +1,5 @@
 #Share-a-Meal API
+
 Welcome to Share-a-Meal API! This API allows you to share meals with others, making it a unique and exciting way to connect with people through the joy of food. Whether you're organizing a potluck, looking for someone to share your culinary masterpiece with, or just want to experience new flavors, Share-a-Meal has got you covered!
 
 Getting Started
