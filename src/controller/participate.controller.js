@@ -193,12 +193,12 @@ let controller = {
                     data: error.data,
                 });
             } else {
-                const convertedResults = results.map((participant) => ({
+                let convertedResults = results.map((participant) => ({
                     ...participant,
                     isActive: participant.isActive === 1 ? true : false,
                 }));
-                const participantsByMeal = convertedResults.reduce((acc, participant) => {
-                    const mealId = participant.mealId;
+                let participantsByMeal = convertedResults.reduce((acc, participant) => {
+                    let mealId = participant.mealId;
                     if (!acc[mealId]) {
                         acc[mealId] = [];
                     }
@@ -210,11 +210,18 @@ let controller = {
                     return acc;
                 },{});
     
-                res.status(200).json({
-                    status: 200,
-                    message: "Participants retrieved successfully",
-                    data: participantsByMeal,
-                });
+                if (convertedResults.length === 0) {
+                    res.status(404).json({
+                      status: 404,
+                      message: `No participants found for the meal with id ${mealId}`,
+                    });
+                } else {
+                    res.status(200).json({
+                      status: 200,
+                      message: "Participants retrieved successfully",
+                      data: participantsByMeal,
+                    });
+                }
             }
         });
     },
@@ -226,7 +233,7 @@ let controller = {
     
         let getParticipantSqlStatement = `SELECT * FROM meal_participants_user mpu
             INNER JOIN user ON mpu.userId = user.id
-            WHERE mp.mealId = ? AND u.id = ?`;
+            WHERE mpu.mealId = ? AND user.id = ?`;
     
         executeQuery(getParticipantSqlStatement, [mealId, participantId],
         function (error, results, fields) {
