@@ -47,6 +47,6 @@ JWT_SECRET_KEY=your_secret_key
 ```
 
 API Documentation
-For a detailed understanding of the available endpoints and their functionalities, please refer to our comprehensive API documentation created with Postman: [Share-a-Meal API Documentation]()
+For a detailed understanding of the available endpoints and their functionalities, please refer to our comprehensive API documentation created with Postman: [Share-a-Meal API Documentation](https://documenter.getpostman.com/view/26980814/2s93zE3Ko5)
 
 We hope you enjoy using Share-a-Meal API and have a great time sharing meals with others! If you have any questions or feedback, feel free to reach out to us. Happy meal-sharing! 🍔 🥗 🍰
