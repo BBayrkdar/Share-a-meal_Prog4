@@ -8,7 +8,7 @@ router.post("/:mealId/participate", loginController.validateToken, partiControll
 
 router.get("/:mealId/participants", partiController.getAllParticipants);
 
-router.get("/:mealId/participants", partiController.getParticipantById);
+router.get("/:mealId/participants/:participantId", partiController.getParticipantById);
 
 router.delete("/:mealId/participate", loginController.validateToken, partiController.unregisterforMeal);
 
