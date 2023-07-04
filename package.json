@@ -1,0 +1,35 @@
+{
+  "name": "prog-4-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "mocha test/**/*.test.js --exit"
+  },
+  "keywords": [],
+  "author": "Baraa Bayrkdar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "chai": "^4.3.7",
+    "cors": "^2.8.5",
+    "date-format": "^4.0.14",
+    "dateformat": "^5.0.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.4.2",
+    "tracer": "^1.1.6"
+  },
+  "devDependencies": {
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "should": "^13.2.3"
+  }
+}
